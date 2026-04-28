@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lapo Boreg : Boru Ni Raja - Restoran Makanan Khas Batak</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-top">
+             PROMO HARI INI: Diskon 20% untuk semua Paket Batak Lengkap! | 
+            <a href="tel:+685793850835">📞 Hubungi: 0857-9385-0835</a>
+        </div>
+        <div class="header-main">
+            <div class="logo-container">
+                  
+<div class="logo-img">
+    <span><img src="Lapo Boreg.png" alt="Lapo Boreg Logo" width="65px" height="65px"></span>  
+</div>
+<div class="logo-text">
+    <h1>LAPO BOREG</h1>    <!-- Nama Restoran -->
+    <p>Boru Ni Raja</p>     <!-- Tagline -->
+</div>
+                </div>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#beranda" class="active">Beranda</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#makanan-khas">Makanan Khas</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Batak Ornament Divider -->
+    <div class="batak-ornament-top"></div>
+    <section class="hero" id="beranda">
+        <div class="hero-ornament-left"></div>
+        <div class="hero-ornament-right"></div>
+        <div class="hero-content">
+            <div class="hero-badge">🏛️ Autentik Budaya Batak</div>
+            <h2>
+                Cita Rasa Asli
+                <span>Tanah Batak</span>
+            </h2>
+            <p>Nikmati kelezatan masakan khas Batak dengan resep turun-temurun. 
+               Setiap hidangan dibuat dengan bumbu rempah pilihan dan cinta dari dapur Lapo Boreg.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-primary">🍽️ Lihat Menu</a>
+                <a href="#kontak" class="btn-secondary">📍 Lokasi Kami</a>
+            </div>
+        </div>
+    </section>
+    <div class="promo-banner">
+        <div class="promo-text">
+            <span class="promo-icon"></span>
+            <span>PROMO SPESIAL: Beli 2 Gratis 1 untuk Arsik & Naniura!</span>
+            <span class="promo-icon">🔥</span>
+        </div>
+    </div>
+
+    <div class="batak-ornament-strip">
+        <div class="ornament-line"></div>
+    </div>
+
+    <section class="section" id="menu">
+        <div class="section-header">
+            <p class="sub-title">✦ Menu Pilihan ✦</p>
+            <h2>Menu Kami</h2>
+            <p>Pilihan hidangan lezat khas Batak yang dibuat dengan bumbu rempah tradisional</p>
+            <div class="ornament-under"></div>
+        </div>
+
+        <div class="category-tabs">
+            <button class="category-tab active" onclick="filterMenu('all')">Semua</button>
+            <button class="category-tab" onclick="filterMenu('makanan')">🍖 Makanan</button>
+            <button class="category-tab" onclick="filterMenu('minuman')"> Minuman</button>
+            <button class="category-tab" onclick="filterMenu('paket')">📦 Paket</button>
+            <button class="category-tab" onclick="filterMenu('dessert')">🍮 Dessert</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid">
+
+            <!-- Menu Item 1 - Saksang -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="card-badge spicy">️ Pedas</div>
+                <div class="menu-card.img">
+                    <img src="Saksang.jpeg" alt="saksang jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Saksang Babi</h3>
+                    <p class="menu-desc">Daging babi dimasak dengan bumbu andaliman khas Batak, santan, dan rempah pilihan.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 45.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 2 - Arsik -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="card-badge new">⭐ Best Seller</div>
+                <div class="menu-card.img">
+                    <img src="arsik.jpeg" alt="arsik jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Arsik Ikan Mas</h3>
+                    <p class="menu-desc">Ikan mas utuh dimasak dengan bumbu kuning khas Batak tanpa digoreng, kaya rempah.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 55.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 3 - Naniura -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="card-badge new">🆕 Baru</div>
+                <div class="menu-card-img">
+                    <img src="naniura.jpeg" alt="naniura jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Ikan Naniura</h3>
+                    <p class="menu-desc">Ikan mentah yang dibumbui dengan bumbu khas Batak, mirip ceviche. Segar dan unik!</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 50.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 4 - Tanggo-tanggo -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="menu-card-img">
+                    <img src="Tanggo-tanggo.jpeg" alt="tanggo-tanggo jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Tanggo-Tanggo</h3>
+                    <p class="menu-desc">Makanan khas batak yang terbuat dari daging babi, yang di cincang lebih besar dari daging saksang.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 50.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 5 - Mie Gomak -->
+            <div class="menu-card fade-in" data-category="makanan">
+    <div class="menu-card-img">
+        <img src="35990_mi-gomak.jpeg" alt="Mie Gomak jpeg" height="200px" width="100%">
+    </div>
+    <div class="menu-card-body">
+        <h3>Mie Gomak</h3>
+        <p class="menu-desc">Mie kuning yang dimasak dan disajikan dengan kuah yang mengandung santan kelapa, rempah-rempah, serta bumbu pedas.</p>
+        <div class="menu-card-footer">
+            <span class="menu-price">Rp 50.000</span>
+            <button class="btn-add">+</button>
+        </div>
+    </div>
+</div>
+
+            <!-- Menu Item 6 - UBI TUMBUK -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="menu-card-img">
+                    <img src="daun_ubi_tumbuk.jpeg" alt="daun ubi tumbuk jpeg" height="200px" width="100%">
+                    </div>
+                <div class="menu-card-body">
+                    <h3>Daun Ubi Tumbuk</h3>
+                    <p class="menu-desc">Hidangan sayuran yang terbuat dari daun singkong yang ditumbuk</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 25.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 7 - Ombus-ombus -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="menu-card-img">
+                    <img src="Cara-Membuat-Resep-Kue-Ombus-Ombus-Khas-Batak-Beserta-Sejarahnya.jpeg" al="Ombus-ombus jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Ombus-ombus</h3>
+                    <p class="menu-desc">Kue ketan khas Batak yang dibungkus daun pisang, disajikan dengan sambal khas.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 15.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 8 - Bawi  -->
+            <div class="menu-card fade-in" data-category="makanan">
+                <div class="card-badge"> 🏆LIMITED EDITION</div>
+                <div class="menu-card-img">
+                    <img src="Harinake.jpeg" alt="Harinake jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Harinake</h3>
+                    <p class="menu-desc">olahan daging babi cincang yang berasal dari Pulau Nias, Sumatera Utara, tepatnya di Nias bagian Utara dan Nias bagian Barat.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 40.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Menu Item 8 - Toba Coffee -->
+            <div class="menu-card fade-in" data-category="minuman">
+                <div class="card-badge">☕ Kopi</div>
+                <div class="menu-card-img">
+                    <img src="kopi toba.jpeg" alt="Kopi Toba jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Kopi Toba (Mandailing)</h3>
+                    <p class="menu-desc">Kopi arabika pilihan dari perbukitan Toba, diseduh dengan cara tradisional.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 20.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 9 - susu jahe batak -->
+            <div class="menu-card fade-in" data-category="minuman">
+                <div class="card-badge new">🆕 Baru</div>
+                <div class="menu-card-img">
+                <img src="Susu jahe batak.jpeg" alt="susu jahe batak jpeg" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Susu Jahe Batak</h3>
+                    <p class="menu-desc">Terbuat dari jahe merah bakar/geprek, gula merah, dan susu,ditambahka serai, kayu manis, atau lada hitam.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 18.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 10 - tuak -->
+            <div class="menu-card fade-in" data-category="minuman">
+                <div class="card-badge"> ⭐⭐⭐ TRENDING</div>
+                <div class="menu-card-img">
+                <img src="tuak.jpeg" alt="Tuak Bagot Jpeg" height="300px" width="150%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Tuak Bagot</h3>
+                    <p class="menu-desc">Berasal dari nira mayang (bunga) pohon bagot (aren/Arenga pinnata)</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 15.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 11 - Mandi -->
+            <div class="menu-card fade-in" data-category="minuman">
+                <div class="menu-card-img">
+                <img src="Mandi.jpeg" alt="Manis Dingin" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Mandi (Manis Dingin)</h3>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 15.000</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 12 - Paket Boru Ni Raja -->
+            <div class="menu-card fade-in" data-category="paket">
+                <div class="card-badge">👑 Premium</div>
+                <div class="menu-card-img">
+                    <img src="paket boru ni raja.png" alt="paket boru ni raja png" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Paket Boru Ni Raja</h3>
+                    <p class="menu-desc">Paket lengkap: Arsik + Tanggo-tanggo + harinake + Nasi Putih + Mandi.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 85.000 <small>Rp 105.000</small></span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 13 - Paket Raja Hasibuan -->
+            <div class="menu-card fade-in" data-category="paket">
+                <div class="card-badge spicy">️ Pedas</div>
+                <div class="menu-card-img">
+                <img src="paket raja Haribuan.png" alt="paket raja hasibuan png" height="200px" width="100%"> 
+                </div>
+                <div class="menu-card-body">
+                    <h3>Paket Raja Hasibuan</h3>
+                    <p class="menu-desc">Saksang + Mie Gomak + Ikan Naniura + Nasi Putih + Kopi Toba.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 95.000 <small>Rp 120.000</small></span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu Item 14 - Paket Parhoras -->
+            <div class="menu-card fade-in" data-category="paket">
+                <div class="card-badge new">🆕 Baru</div>
+                <div class="menu-card-img">
+                <img src="paket parhobas.png" alt="paket parhobas png" height="200px" width="100%">
+                </div>
+                <div class="menu-card-body">
+                    <h3>Paket Parhoras (Keluarga)</h3>
+                    <p class="menu-desc">Untuk 4 orang: Arsik + Saksang + Tanggo-Tanggo + Daun Ubi Tumbuk + Ombus-ombus 4 Nasi + 4 Mandi.</p>
+                    <div class="menu-card-footer">
+                        <span class="menu-price">Rp 250.000 <small>Rp 320.000</small></span>
+                        <button class="btn-add">+</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Batak Divider -->
+    <div class="batak-divider">
+        <div class="divider-pattern">
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+            <div class="center-symbol"></div>
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+    <section class="featured-section" id="makanan-khas">
+        <div class="section-header">
+            <p class="sub-title">✦ Spesial dari Tanah Batak ✦</p>
+            <h2>Makanan Khas Batak</h2>
+            <p>Hidangan legendaris yang telah diwariskan turun-temurun dari generasi ke generasi</p>
+            <div class="ornament-under"></div>
+        </div>
+
+        <div class="featured-grid">
+            <div class="featured-card fade-in">
+                <div class="card-icon">
+                <img src="arsik.jpeg" alt="arsik.jpeg" height="200px" width="100%">
+                </div>
+                <h3>Arsik</h3>
+                <p>Ikan mas dimasak dengan bumbu kuning khas Batak, dimasak lama hingga bumbu meresap sempurna.</p>
+                <span class="price-tag">Rp 55.000</span>
+            </div>
+
+            <div class="featured-card fade-in">
+                <div class="card-icon">
+                    <img src="Saksang.jpeg" alt="saksang.jpeg" height="200px" width="100%">
+                </div>
+                <h3>Saksang</h3>
+                <p>Daging dengan bumbu andaliman dan darah yang dimasak hingga kental, cita rasa autentik Batak.</p>
+                <span class="price-tag">Rp 45.000</span>
+            </div>
+
+            <div class="featured-card fade-in">
+                <div class="card-icon">
+                    <img src="naniura.jpeg" alt="arsik.jpeg" height="200px" width="100%">
+                </div>
+                <h3>Naniura</h3>
+                <p>Ikan segar yang direndam bumbu asam pedas, hidangan tradisional yang menyegarkan.</p>
+                <span class="price-tag">Rp 50.000</span>
+            </div>
+
+            <div class="featured-card fade-in">
+                <div class="card-icon">
+                    <img src="tuak.jpeg" alt="tuak jpeg" height="200px" width="100%">
+                </div>
+                <h3>Tuak Bagot</h3>
+                <p>Berasal dari nira mayang (bunga) pohon bagot (aren/Arenga pinnata)</p>
+                <span class="price-tag">Rp 40.000</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="batak-ornament-strip">
+        <div class="ornament-line"></div>
+    </div>
+    <section class="about-section" id="tentang">
+        <div class="section">
+            <div class="about-content">
+                <div class="about-image">
+                    <span class="about-icon">
+                        <img src="restoran.png" height="450px" width="110%">
+                    </span>
+                </div>
+                <div class="about-text">
+                    <h2>Tentang <span>Lapo Boreg</span></h2>
+                    <p>Lapo Boreg : Boru Ni Raja adalah restoran yang menghadirkan cita rasa autentik masakan khas Batak. Didirikan dengan semangat melestarikan warisan kuliner tanah Batak, kami berkomitmen menyajikan hidangan terbaik dengan resep turun-temurun.</p>
+                    <p>Setiap hidangan kami dibuat dengan bahan-bahan segar pilihan, bumbu rempah asli dari Tanah Batak, dan dimasak oleh juru masak berpengalaman yang memahami betul cita rasa masakan Batak yang sesungguhnya.</p>
+                    <p>"Lapo" dalam bahasa Batak berarti warung/tempat makan, dan "Boreg" adalah nama yang diambil dari tradisi Batak. Kami bangga menyajikan keaslian rasa Tanah Batak di setiap sajian kami.</p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Tahun Pengalaman</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Menu Khas Batak</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">10K+</div>
+                            <div class="stat-label">Pelanggan Puas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Batak Divider -->
+    <div class="batak-divider">
+        <div class="divider-pattern">
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+            <div class="center-symbol"></div>
+            <div class="line"></div>
+            <div class="diamond"></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <section class="testimonial-section">
+        <div class="section">
+            <div class="section-header">
+                <p class="sub-title">✦ Ulasan Pelanggan ✦</p>
+                <h2>Apa Kata Mereka?</h2>
+                <p>Pelanggan kami merasakan keaslian cita rasa Batak di setiap kunjungan</p>
+                <div class="ornament-under"></div>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Arsik ikan masnya luar biasa! Bumbu kuningnya meresap sampai ke tulang. Rasanya persis seperti masakan nenek saya di Silalahi. Lapo Boreg memang the best!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">RS</div>
+                        <div class="reviewer-info">
+                            <h4>Rosma Sitorus</h4>
+                            <span>Pelanggan Setia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Saksangnya pedas mantap! Andalimannya berasa banget. Paket Boru Ni Raja worth it banget, porsinya besar dan harganya ramah di kantong."</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">DT</div>
+                        <div class="reviewer-info">
+                            <h4>Dani Tampubolon</h4>
+                            <span>Food Blogger</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Tempatnya bersih, pelayanannya ramah, dan makanannya enak banget! Naniuranya fresh, kopinya juga mantap. Pasti balik lagi!"</p>
+                    <div class="reviewer">
+                        <div class="reviewer-avatar">SM</div>
+                        <div class="reviewer-info">
+                            <h4>Sari Manurung</h4>
+                            <span>Pengunjung Baru</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="batak-ornament-strip">
+        <div class="ornament-line"></div>
+    </div>
+    <section class="order-cta">
+        <h2>️ Pesan Sekarang!</h2>
+        <p>Nikmati cita rasa autentik Batak. Pesan untuk makan di tempat atau delivery!</p>
+        <a href="https://wa.me/6281234567890?text=Halo%20Lapo%20Boreg%2C%20saya%20mau%20pesan%20makanan" class="btn-order">
+            📱 Pesan via WhatsApp
+        </a>
+    </section>
+
+    <section class="contact-section" id="kontak">
+        <div class="section">
+            <div class="section-header">
+                <p class="sub-title" style="color: var(--primary-red);">✦ Hubungi Kami ✦</p>
+                <h2>Kontak & Lokasi</h2>
+                <p>Kunjungi Lapo Boreg atau hubungi kami untuk reservasi</p>
+                <div class="ornament-under"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📍</div>
+                    <h3>Cabang Pusat</h3>
+                    <p>Jl. Sisingamangaraja No. 88<br>Medan, Sumatera Utara<br>Indonesia 20111</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📞</div>
+                    <h3>Telepon</h3>
+                    <p>+62 857-9385-0835<br>+62 57-9385-0835</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon"></div>
+                    <h3>Jam Buka</h3>
+                    <p>Senin - Sabtu: 10.00 - 22.00<br>Minggu: 10.00 - 21.00</p>
+                </div>
+
+                <div class="contact-card fade-in">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>info@lapoboreg.id<br>reservasi@lapoboreg.id</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <div class="footer-logo-icon"><img src="Lapo Boreg.png" width="65px" height="65px"></div>
+                    <div>
+                        <h3>Lapo Boreg</h3>
+                        <span>BORU NI RAJA</span>
+                    </div>
+                </div>
+                <p>Restoran makanan khas Batak yang menghadirkan cita rasa autentik Tanah Batak. Kami berkomitmen melestarikan warisan kuliner Batak untuk generasi mendatang.</p>
+                <div class="footer-social">
+                    <a href="#" title="Facebook">📘</a>
+                    <a href="#" title="Instagram">📸</a>
+                    <a href="#" title="TikTok">🎵</a>
+                    <a href="#" title="YouTube">▶️</a>
+                </div>
+            </div>
+
+            <div>
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="#">Saksang</a></li>
+                    <li><a href="#">Arsik Ikan Mas</a></li>
+                    <li><a href="#">Naniura</a></li>
+                    <li><a href="#">Tangtang</a></li>
+                    <li><a href="#">Pangek</a></li>
+                    <li><a href="#">Tipatip</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Tautan</h4>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">Lokasi</a></li>
+                    <li><a href="#">Reservasi</a></li>
+                    <li><a href="#">Karir</a></li>
+                    <li><a href="#">Promo</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Jam Operasional</h4>
+                <ul>
+                    <li><a href="#">Senin: 10.00 - 22.00</a></li>
+                    <li><a href="#">Selasa: 10.00 - 22.00</a></li>
+                    <li><a href="#">Rabu: 10.00 - 22.00</a></li>
+                    <li><a href="#">Kamis: 10.00 - 22.00</a></li>
+                    <li><a href="#">Jumat: 10.00 - 22.00</a></li>
+                    <li><a href="#">Sabtu: 10.00 - 22.00</a></li>
+                    <li><a href="#">Minggu: 10.00 - 21.00</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Lapo Boreg : Boru Ni Raja. All Rights Reserved. | Cita Rasa Autentik Tanah Batak</p>
+        </div>
+    </footer>
+
+    <div class="footer-ornament"></div>
+    <a href="https://wa.me/6281234567890?text=Halo%20Lapo%20Boreg%2C%20saya%20mau%20pesan" class="floating-order" title="Pesan Sekarang">
+        
+    </a>
+    <script src="script.js">
+    </script>
+
+</body>
+</html>
